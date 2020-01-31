@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block titill %}
+    Hallo
+{% endblock %}
+
+{% block innihald %}
+    <h1>Frétta sagnir:</h1>
+
+    {% for i in frettir %}
+        <h4><a href="/grein/{{ i[0] }}">{{ i[1] }}</a></h4>
+    {% endfor %}
+
+{% endblock %}
